@@ -1,9 +1,7 @@
 package com.example.Account.exception;
-
 import lombok.Getter;
 
 @Getter
-
 public class MerchantNotFoundException extends RuntimeException {
     private final Long merchantId;
 

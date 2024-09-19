@@ -8,8 +8,10 @@ import java.util.List;
 
 @Repository
 public interface AccountRepository extends JpaRepository<Account,Long> {
+
      @Query("SELECT a FROM Account a WHERE a.merchantId = :merchantId")
      List<Account> findByMerchantId(@Param("merchantId") Long merchantId);
+
      @Query("SELECT b FROM Account b WHERE b.customerId = :customerId")
      List<Account> findByCustomerId(@Param(("customerId")) Long customerId);
 }
