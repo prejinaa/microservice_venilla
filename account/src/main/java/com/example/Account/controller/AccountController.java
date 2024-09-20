@@ -7,7 +7,7 @@ import com.example.Account.exception.MerchantNotFoundException;
 import com.example.Account.service.AccountService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j; // Import logger
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +16,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/accounts")
 @RequiredArgsConstructor
-@Slf4j // Lombok annotation to add a logger
+@Slf4j
 public class AccountController {
 
     private final AccountService accountService;

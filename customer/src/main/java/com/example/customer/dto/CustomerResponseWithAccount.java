@@ -1,8 +1,10 @@
 package com.example.customer.dto;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
-public record CustomerResponse(
+public record CustomerResponseWithAccount(
+
         Long customerId,
         String name,
         Long contactNumber,
@@ -10,6 +12,7 @@ public record CustomerResponse(
         String email,
         Long userId,
         LocalDateTime createDate,
-        LocalDateTime lastModified
+        LocalDateTime lastModified,
+        List<AccountResponse> accountResponse
 ) {
 }
